@@ -1,0 +1,14 @@
+{
+  "name": "3-typescript",
+  "version": "1.0.0",
+  "description": "Descripción de mi proyecto en NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Murciano",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  }
+}

@@ -1,0 +1,26 @@
+<h3>Lista simple</h3>
+<ul>
+    <li *ngFor="let estudiante of listaEstudiantes" >
+        {{ estudiante.nombre + " " + estudiante.apellido }}
+    </li>
+</ul>
+
+<hr>
+
+<h3>Lista con directiva personalizada</h3>
+<ul appDirectivaPersonalizada>
+    <li  *ngFor="let estudiante of listaEstudiantes" >
+        {{ estudiante.nombre + " " + estudiante.apellido }}
+    </li>
+</ul>
+
+<hr>
+
+<h3>Lista con directiva personalizada y condicional</h3>
+
+<div *ngFor="let estudiante of listaEstudiantes">
+    <ul>
+        <li *ngIf="estudiante.edad >= 18">{{ estudiante.nombre}} es mayor de edad</li>
+    </ul>
+
+</div>

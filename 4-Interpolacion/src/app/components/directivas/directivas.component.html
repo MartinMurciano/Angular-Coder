@@ -1,0 +1,32 @@
+<h1>Demo de interpolación y directivas</h1>
+<h2 style="color: red;" class="subtitle"> {{ subtitle }} </h2>
+
+<h3>Directivas de atributo</h3>
+
+
+<p [style.border]="variable1 === 5 ? '1px solid black' : '1px solid red'">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi incidunt impedit sunt. Quasi quos ipsum deserunt velit, maiores consequuntur libero quo culpa! Deleniti adipisci nostrum aspernatur repellat, quas ad delectus. </p>
+
+<p [ngClass]="variable1 === 5 ? 'border-verde': 'border-rojo' ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi incidunt impedit sunt. Quasi quos ipsum deserunt velit, maiores consequuntur libero quo culpa! Deleniti adipisci nostrum aspernatur repellat, quas ad delectus. </p>
+
+<hr>
+
+<h3>Directivas estructurales</h3>
+
+<ul>
+    <li *ngFor="let estudiante of listaEstudiantes" [ngClass]="estudiante.activo ? 'activo' : 'inactivo'  " >
+        {{ estudiante.nombre }}
+        <button *ngIf="estudiante.activo == false" >Activar</button>
+    </li>
+</ul>
+
+<div [ngSwitch]="estudianteActual.nombre">
+    <div *ngSwitchCase=" 'Juan' "> El usuario es Juan </div>
+    <div *ngSwitchCase=" 'Monica' "> El usuario es Monica </div>
+    <div *ngSwitchDefault>Otro usuario se encuentre logueado</div>
+</div>
+
+<hr>
+
+<h3>Directiva personalizada</h3>
+
+<p appDirectivaPersonalizada>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi incidunt impedit sunt. Quasi quos ipsum deserunt velit, maiores consequuntur libero quo culpa! Deleniti adipisci nostrum aspernatur repellat, quas ad delectus. </p>
